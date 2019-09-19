@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       .video1{
+          display: none;
+       }
+       .video_box_1 {
+           background: url(../img/rwsp9_bj.jpg) no-repeat;
+           width: 320px;
+           height: 506px;
+       }
+    </style>
+</head>
+<body>
+  <div class="video_box_1 video_box">
+    <video class="video1" src="../video/7.mp4" loop></video>
+    <a href="javascript:" class="spr_b video_btn2 videoa">11111</a>
+      <a class="box3_nav" href="javascript:">2222222222222</a>
+</div>
+<script>
+    var closeVideo=document.querySelector(".box3_nav")
+    var luckVideoPlay = document.querySelector(".videoa");
+    /*找到视频标签*/
+    var luckVideo =document.querySelector(".video1");
+    /*点击播放*/
+    luckVideoPlay.onclick=function () {
+        luckVideo.style.display="block";
+        luckVideo.play();
+    };
+    closeVideo.onclick=function () {
+        luckVideo.pause();
+        luckVideo.style.display="none";
+        luckVideo.currentTime=0;
+    };
+</script>
+</body>
+</html>
